@@ -81,5 +81,5 @@ from bookings b
 join rooms r on b.room_id=r.room_id
 group by r.room_type;
 
-select g.guest_name, count(b.booking_id) as lan_dat_phong from guests join bookings b on g.guest_id=b.guest_id
+select g.guest_name, count(b.booking_id) as lan_dat_phong from guests g join bookings b on g.guest_id=b.guest_id
 group by g.guest_name having count(b.booking_id) >= 2;
